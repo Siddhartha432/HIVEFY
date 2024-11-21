@@ -3,11 +3,11 @@ return a+b;
 }
 
 
-const addNUmbersArrow = (a:number,b:number): string=>{
+const addNumbersArrow = (a:number,b:number): string=>{
 return `El resultado es: ${a+b}`; //Esta expresion nos ayuda ha hacer una inyeccion de una exprecion de javaScript dentro de una cadena 
 }
 
-function multiply(firstNUmber: number,secondNumber?: number,base: number= 2):number{
+function multiply(firstNUmber: number,secondNumber?: number,base: number= 2):number{  //El simbolo de interrogación nos dice que la variable puede no utilizarse
     return firstNUmber * base;
 }
 //const result: number = addNumbers(2,4);
