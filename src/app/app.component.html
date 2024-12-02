@@ -7,9 +7,11 @@
 <body>
 
 <form class="form">
-    <h2 class="form_title">Inicia sesión</h2>
-    <p class="form_paragraph">Guía para posers</p>
 
+    <div class="titulos">
+    <h2 class="form_title">{{title }}</h2>
+    <p class="form_paragraph">{{subtitle}}</p>
+</div>
 <div class="form_container">
 
     <div class="form_grup">
@@ -31,7 +33,12 @@
     </div>
 
 </div>
-
 </form>
+
+
+<div class="cajaDePrueva"><p> ¿Cuántos generos de metla hay?: </p>
+<button (click)='sumar()'>+1</button>
+{{numero}}
+</div>
 </body>
 </html>

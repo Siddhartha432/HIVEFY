@@ -9,6 +9,9 @@ import { AppModule } from './app/app.module';
 //import './topics.ts/06-function-destrugturing';
 //import './topics.ts/07-import-export';
 //import './topics.ts/08-classes';
-import './topics.ts/09-generics';
+//import './topics.ts/09-generics';
+//import './topics.ts/10-decorators';
+import './topics.ts/11-optional-chaining';
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
