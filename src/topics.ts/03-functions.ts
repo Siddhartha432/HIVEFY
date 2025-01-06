@@ -32,6 +32,7 @@ const healCHaracter = (character:Character, amount:number)=>{
 
     character.hp+= amount;
 }
+strider.showHp();
 healCHaracter(strider,50);
 strider.showHp();
-export{};
+export{healCHaracter,};

@@ -1,0 +1,11 @@
+<h1 style="background-color: azure; text-align:center ;">Albums de metal</h1>
+<hr>
+<div class="row">
+    <div class="col">
+<app-list-metal [character]="metalService.characters" (onDeleteId)="metalService.onDeletById($event)"></app-list-metal>
+</div>
+<div class="col">
+<app-add-album 
+(onNewCharacter)="metalService.onNewCharacter($event)"></app-add-album>
+</div>
+</div>

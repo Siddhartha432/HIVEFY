@@ -1,0 +1,27 @@
+
+    
+        <h4>Listado</h4>
+        <ul class="list-group">
+<li *ngFor="
+let character of character;
+let i = index;
+let isEven = even;
+let isOdd = odd;
+" 
+class="list-group-item  mb-1 d-flex justify-content-between align-items-center"
+[ngClass]="{
+'list-group-item-primary': isEven,
+'list-group-item-success':isOdd
+
+}">
+<div>
+<span>{{i+1}}</span>
+{{character.banda}} • {{character.album}} 
+</div>
+<button class="btn btn-danger" (click)="onDeleteCharacter(character.id)">X</button>
+
+</li>
+
+</ul>
+
+

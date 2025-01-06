@@ -9,6 +9,7 @@ max-height: 600px;
 overflow-y: scroll;
 img{
     height: 250px;
+    margin: 20px;
 }
 }
 dt{
@@ -17,4 +18,7 @@ dt{
 }
 dl{
     text-align: center ;
+}
+.contenedor{
+    display: flex;
 }

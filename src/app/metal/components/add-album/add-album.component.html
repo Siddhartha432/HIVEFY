@@ -1,0 +1,25 @@
+
+    <form class="row" (ngSubmit)="emitAlbum()" >
+        <h4>Agregar banda y album</h4>
+
+        <input type="text" 
+        [(ngModel)]="character.banda"
+         placeholder="banda" 
+         name="banda"
+        class="from-control mb-2">
+
+
+        <input type="text" 
+        [(ngModel)]="character.album"
+        placeholder="album" 
+        name="album"
+        class="from-control mb-2">
+
+ <button type="submit" 
+ class="btn btn-primary"
+ (click)="emitAlbum()"
+ >AGREGAR</button>
+    
+<!-- <pre style="background-color: white ;">{{character | json}}</pre>  Esta lienea es un pipe -->
+
+</form>
