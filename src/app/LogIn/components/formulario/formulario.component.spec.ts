@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeavyMetalComponent } from './heavy-metal.component';
+import { FormularioComponent } from './formulario.component';
 
-describe('HeavyMetalComponent', () => {
-  let component: HeavyMetalComponent;
-  let fixture: ComponentFixture<HeavyMetalComponent>;
+describe('FormularioComponent', () => {
+  let component: FormularioComponent;
+  let fixture: ComponentFixture<FormularioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HeavyMetalComponent]
+      declarations: [FormularioComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(HeavyMetalComponent);
+    fixture = TestBed.createComponent(FormularioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
