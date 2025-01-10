@@ -4,7 +4,9 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 import { MetalModule } from "./metal/metal.module";
-import { logInModule } from "./LogIn/logIn.module";
+import { SharedModule } from "./shared/shared.module";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,10 +17,12 @@ import { logInModule } from "./LogIn/logIn.module";
     BrowserModule,
     AppRoutingModule,
     MetalModule,
-    logInModule
+    SharedModule,
+HttpClientModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

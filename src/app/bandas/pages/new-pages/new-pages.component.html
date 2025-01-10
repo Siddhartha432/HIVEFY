@@ -1,0 +1,62 @@
+<h1 style="background-color: azure; text-align:center ;">Albums de metal</h1>
+<hr>
+<div class="row">
+    <div class="col">
+
+        <h4>Listado</h4>
+        <ul class="list-group">
+<li *ngFor="
+let character of bandas;
+let i = index;
+let isEven = even;
+let isOdd = odd;
+" 
+class="list-group-item  mb-1 d-flex justify-content-between align-items-center"
+[ngClass]="{
+'list-group-item-primary': isEven,
+'list-group-item-success':isOdd
+
+}">
+<div>
+<span>{{i+1}}</span>
+{{character.banda}} • {{character.id}} 
+</div>
+<button class="btn btn-danger" >X</button>
+
+</li>
+
+</ul>
+
+
+
+</div>
+<div class="col">
+
+
+    <form class="row"  >
+        <h4>Agregar banda y album</h4>
+
+        <input type="text" 
+        
+         placeholder="banda" 
+         name="banda"
+        class="from-control mb-2">
+
+
+        <input type="text" 
+        
+        placeholder="album" 
+        name="album"
+        class="from-control mb-2">
+
+ <button type="submit" 
+ class="btn btn-primary"
+ >AGREGAR</button>
+    
+<!-- <pre style="background-color: white ;">{{character | json}}</pre>  Esta lienea es un pipe -->
+
+</form>
+
+
+</div>
+</div>

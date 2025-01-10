@@ -1,0 +1,8 @@
+<h1>Listado de Héroes</h1>
+<mat-divider></mat-divider>
+<div class="grid bm-8 pt-2">
+    <div *ngFor="let banda of bandas" 
+    class="col-12 sm:col-3 xl:col-2">
+<banda-bandas-card [banda]="banda"></banda-bandas-card>   
+ </div>
+</div>
