@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, of } from 'rxjs';
+import { catchError, map, Observable, of, pipe } from 'rxjs';
 import { Banda } from '../interfaces/bandas.interface';
 import { environments } from '../../../environments/environments';
 
@@ -19,7 +19,20 @@ export class BandasService {
     }
 
     getSugestions(query:string):Observable<Banda[]>{
-        return this.http.get<Banda[]>(`/albums?q=${query}&_limit=5`);
+        return this.http.get<Banda[]>(`${this.baseUrl}/albums?q=${query}&_limit=5`);
     }
-    
+
+    addAlbum(banda:Banda): Observable<Banda> {
+        console.log('añadiendo: '+banda);
+
+return this.http.post<Banda>(`${this.baseUrl}/albums`,banda);
+    }    
+
+    deleteAlbumById(id:string): Observable<boolean> {
+        return this.http.delete(`${this.baseUrl}/albums/${id}`)
+        .pipe(
+            catchError(err => of(false)),
+map(resp => true)
+        );
+            }   
 }

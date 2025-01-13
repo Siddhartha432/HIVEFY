@@ -6,6 +6,14 @@
       "email": "john.due@gmail.com"
     }
   ],
+  "users2":[
+    {
+      "id": 1,
+      "usuario": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  
   "albums": [
     {
       "id": "sovran",

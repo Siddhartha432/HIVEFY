@@ -4,6 +4,6 @@
         <mat-card-subtitle>{{banda.banda}}</mat-card-subtitle>
     </mat-card-header>
 
-<img mat-card-image [src]="'../assets/'+banda.id+'.jpeg'" alt="NANA">
+<img mat-card-image [src]="banda | bandaImage" alt="NANA">
 
 </mat-card>

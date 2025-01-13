@@ -1,12 +1,15 @@
-import { Path } from './../../../CRUD/node_modules/chokidar/esm/handler.d';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import path from 'path';
 import { Error404PageComponent } from './shared/error404-page/error404-page.component';
+import { AuthGuard } from './auth/guards/auth.guard';
+
 const routes: Routes = [
   {
   path: 'bandas',
   loadChildren: () => import('./bandas/bandas.module').then(m => m.BandasModule),
+canActivate:[AuthGuard],
+canMatch:[AuthGuard]
 },
 {
 path: 'auth',

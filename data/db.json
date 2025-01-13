@@ -6,26 +6,34 @@
       "email": "john.due@gmail.com"
     }
   ],
+  "users1": [
+    {
+      "id": 1,
+      "usuario": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+ 
   "albums": [
     {
       "id": "sovran",
       "banda": "Draconian"
-    }, {
-      "id": "alteredState",
-      "banda": "Tesseract"
-    }, {
+    },
+    {
       "id": "hate",
       "banda": "Thy art is murder"
-    }, {
+    },
+    {
       "id": "zwielicht",
       "banda": "Mental Cruelty"
-    }, {
+    },
+    {
       "id": "lotus",
       "banda": "Mental Cruelty"
-    }, {
+    },
+    {
       "id": "evangelion",
       "banda": "Behemoth"
     }
-    
   ]
 }

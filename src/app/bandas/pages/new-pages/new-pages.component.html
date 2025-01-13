@@ -21,7 +21,7 @@ class="list-group-item  mb-1 d-flex justify-content-between align-items-center"
 <span>{{i+1}}</span>
 {{character.banda}} • {{character.id}} 
 </div>
-<button class="btn btn-danger" >X</button>
+<button class="btn btn-danger" (click)="onDeleteCharacter(character.id)" >X</button>
 
 </li>
 
@@ -33,28 +33,40 @@ class="list-group-item  mb-1 d-flex justify-content-between align-items-center"
 <div class="col">
 
 
-    <form class="row"  >
+    <form class="row"  [formGroup]="bandaForm" >
         <h4>Agregar banda y album</h4>
 
         <input type="text" 
         
          placeholder="banda" 
          name="banda"
-        class="from-control mb-2">
-
-
+        class="from-control mb-2"
+        required
+        formControlName="banda"
+        >
+        
         <input type="text" 
         
         placeholder="album" 
         name="album"
-        class="from-control mb-2">
+        class="from-control mb-2"
+        formControlName="id"
+        >
+
+        <input type="text" 
+        
+        placeholder="IMG" 
+        name="IMG"
+        class="from-control mb-2"
+        formControlName="alt_img"
+        >
 
  <button type="submit" 
  class="btn btn-primary"
+ (click)="onSubmit()"
  >AGREGAR</button>
     
-<!-- <pre style="background-color: white ;">{{character | json}}</pre>  Esta lienea es un pipe -->
-
+ 
 </form>
 
 
